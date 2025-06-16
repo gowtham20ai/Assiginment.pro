@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="2xl container mx-auto bg-neutral-400">
+        <div class="w-[90%] mx-auto">
+            <div class="flex flex-col justify-center items-center h-screen  py-10 ">
+
+                <form class=" flex flex-col gap- bg-slate-500 p-10 rounded-xl shadow-2xl shadow-emerald-500 " id="form" >
+                    <h1 class="text-[18px] font-bold text-center py-3">update Passsword</h1>
+                 <div class="space-y-1">
+                    <label for="" class="text-white ">New Passsword</label><br>
+                    <input type="text" class="" id="newpp">
+                    <p id="pa1" class="text-[14px] " ></p>
+                 </div>
+                 <div class="space-y-1" >
+                 
+                    <label for="" class="text-white">Confirm Passsword</label><br>
+                    <input type="password" class="" id="pass">
+                    <p id="pa2" class="text-[14px] "></p>
+                 </div>
+                 <button  class="w-px-6 py-3 text-[12px] text-white bg-blue-600 rounded-lg mt-2 focus-border-none"   >Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form = document.getElementById("form");
+        var  newpp = document.getElementById("newpp");
+        var pass= document.getElementById("pass");
+        var pa1 = document.getElementById("pa1");
+        var pa2 = document.getElementById("pa2");
+    
+        function request(newpp,pass){
+            if(newpp === ""){
+                pa1.textContent = "required";
+                //  return;
+             } else if(newpp.length < 6){
+                pa1.textContent = "Password must be at least 6 characters";
+                // return;
+             }  
+            else{
+                pa1.textContent = "";
+            }
+              
+            if(pass === ""){
+                pa2.textContent = "required";
+                // return;
+            } else if(pass !== newpp){
+                pa2.textContent = "Password does not match";
+                // return;
+            } 
+            
+            else {
+                pa2.textContent = "";
+            }
+
+            // Simulate a successful request
+           
+            
+           
+        }
+
+    
+
+
+        form.addEventListener("submit" , (e) =>{
+       
+        //    console.log(newpp.value);
+        //     console.log(pass.value);
+          request(newpp.value, pass.value);
+          
+           e.preventDefault();
+        })
+    </script>
+</body>
+</html>
+
