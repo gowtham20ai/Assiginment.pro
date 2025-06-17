@@ -1,0 +1,112 @@
+   1.What is JavaScript
+JavaScript is a programming language used to create interactive and dynamic content on websites. 
+It allows developers to add features like form validation, animations, and user interactions, making web pages more engaging and functional.
+
+  2.Variable and type
+function gow(){
+// Declare variables
+var userAge = 25; // Numerical value
+var  userName = "Alice"; // String value
+
+// Output variables
+console.log(userAge);
+console.log(userName);
+}
+gow()
+
+
+  3.Comments in JavaScript
+In JavaScript, comments are used to add notes or explanations within the code. Multi-line comments start with `/*` and end with `*/`.
+They are useful for describing the purpose or functionality of functions or complex code sections, making the code easier to understand.
+
+ 4.Operations
+
+function gow(){
+// Create variables
+var num1 = 10;
+var  num2 = 5;
+
+//  operations working area 
+console.log("Addition: " + (num1 + num2));
+console.log("Subtraction: " + (num1 - num2));
+console.log("Multiplication: " + (num1 * num2));
+console.log("Division: " + (num1 / num2));
+}
+gow()
+
+
+  5.Data type
+
+// String Used into  text
+let myString = "Hello, World!";
+
+// Number Used for numerical values
+let myNumber = 42;
+
+// Boolean: used into  true or false
+let isJavaScriptFun = true;
+
+// Array is a collection of multiple values
+let myArray = [1, 2, 3, 4, 5];
+```
+
+Explanation:
+
+String is a sequence of characters enclosed in quotes, used to store text.
+Number used for a Numeric data, can be integers or floating-point numbers.
+Boolean Logical data type with only two values true or false.
+Array is a list of multiple values, which can be of any data type, stored in a single variable.
+
+6.function in js
+
+function gow(){
+//  the function greetUser that takes a name parameter
+function greetUser(name) {
+  return "Hello, " + name + "!";
+}
+
+// Call the function with a sample name,
+let greetingMessage = greetUser("Alice");
+
+// Display the result
+console.log(greetingMessage);
+}
+gow()
+
+  7.if else in js
+
+// Create a variable named temperature and assign a value
+let temperature = 35;
+
+// Check if the temperature is greater than 30 
+if (temperature > 30) {
+  console.log("It's a hot day!");
+} else {
+  console.log("It's not that hot today.");
+}
+
+    8.for loop 
+
+function gow(){
+// Use a for loop to print numbers from 1 to 5
+for (var i = 1; i <= 8; i++) {
+  console.log(i);
+}
+}
+gow()
+
+   9.Loose vs Strict Equality
+
+Loose Equality == 
+1 Compares values after type coercion.  
+ Example
+`5 == '5'` → `true` {because `'5'` is converted to `5` }
+
+Strict Equality ===  
+1 Compares both value and type without coercion.  
+ Example
+5 === "5" → false (different types: number vs string)  
+
+ Use === to avoid unexpected type conversions 
+
+
